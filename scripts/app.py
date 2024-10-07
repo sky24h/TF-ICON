@@ -21,6 +21,10 @@ from gradio_image_annotation import image_annotator
 DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 CONFIG_PATH = "./configs/stable-diffusion/v2-inference.yaml"
 CKPT_PATH = "./ckpt/v2-1_512-ema-pruned.ckpt"
+if not os.path.exists(CKPT_PATH):
+    # automatically download the checkpoint if it doesn't exist
+    print(f"Checkpoint {CKPT_PATH} not found, downloading from huggingface")
+    os.system(f"wget -O {CKPT_PATH} https://huggingface.co/stabilityai/stable-diffusion-2-1-base/resolve/main/v2-1_512-ema-pruned.ckpt")
 CONFIG = OmegaConf.load(CONFIG_PATH)
 
 
