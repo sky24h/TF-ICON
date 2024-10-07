@@ -1,3 +1,27 @@
+### This is a forked version with minor modifications
+---
+Main updates:
+- Use requirements.txt instead of tf_icon_env.yaml for easier environment setup.
+- Update the code to work with the latest version of Gradio and other libraries.
+- Users can now draw a bounding box on the background image to specify the mask.
+<!-- - Provide an online demo using Hugging Face Spaces. -->
+
+To install the necessary package.
+```bash
+pip install -r requirements.txt
+```
+
+Gradio Demo:
+```bash
+python scripts/app.py
+```
+<!-- Online Demo:
+
+https://huggingface.co/spaces/sky24h/TF-ICON-unofficial -->
+
+
+Original README:
+---
 # TF-ICON: Diffusion-Based Training-Free Cross-Domain Image Composition (ICCV 2023)
 
 ## [<a href="https://shilin-lu.github.io/tf-icon.github.io/" target="_blank">Project Page</a>] [<a href="https://entuedu-my.sharepoint.com/:b:/g/personal/shilin002_e_ntu_edu_sg/EWRDLuFDrs5Ll0KGuMtvtbUBhBZcSw2roKCo96iCWgpMZQ?e=rEv3As" target="_blank">Poster</a>]
